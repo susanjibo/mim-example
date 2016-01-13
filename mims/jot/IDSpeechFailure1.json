@@ -1,0 +1,83 @@
+{
+  "mim_id": "IDSpeechFailure1",
+  "skill_id": "jot",
+  "mim_type": "question",
+  "rule_name": "CrewMembers",
+  "rule_slots": "",
+  "screen_slots_available": "true",
+  "sample_utterances": "This is George,This is Jane",
+  "timeout": "5",
+  "force_confirmation": "false",
+  "barge_in": "true",
+  "photo_quality_light": "false",
+  "notes": "",
+  "modified": "1/12/2016 10:19:12 PM",
+  "prompts": [
+    {
+      "mim_id": "IDSpeechFailure1",
+      "prompt_category": "Entry-Core",
+      "prompt_sub_category": "HoldReturn",
+      "index": "",
+      "condition": "",
+      "prompt": "So, can you say your beautiful name for me?",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "IDSpeechFailure1_HoldReturn_"
+    },
+    {
+      "mim_id": "IDSpeechFailure1",
+      "prompt_category": "Entry-Core",
+      "prompt_sub_category": "Q",
+      "index": "1",
+      "condition": "",
+      "prompt": "Sorry, I'm a little fuzzy today; who is this?",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "IDSpeechFailure1_Q_1"
+    },
+    {
+      "mim_id": "IDSpeechFailure1",
+      "prompt_category": "Entry-Core",
+      "prompt_sub_category": "Q",
+      "index": "2",
+      "condition": "",
+      "prompt": "Sorry, can you say your name for me?",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "IDSpeechFailure1_Q_2"
+    },
+    {
+      "mim_id": "IDSpeechFailure1",
+      "prompt_category": "Entry-Core",
+      "prompt_sub_category": "Truncated",
+      "index": "1",
+      "condition": "",
+      "prompt": "Who's this?",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "IDSpeechFailure1_Truncated_1"
+    },
+    {
+      "mim_id": "IDSpeechFailure1",
+      "prompt_category": "Entry-Core",
+      "prompt_sub_category": "Verbose",
+      "index": "",
+      "condition": "",
+      "prompt": "I think I got something stuck in my ear. Can you say your name for me?",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "IDSpeechFailure1_Verbose_"
+    },
+    {
+      "mim_id": "IDSpeechFailure1",
+      "prompt_category": "Errors",
+      "prompt_sub_category": "NI",
+      "index": "1",
+      "condition": "",
+      "prompt": "So, who is this?",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "IDSpeechFailure1_NI_1"
+    }
+  ]
+}

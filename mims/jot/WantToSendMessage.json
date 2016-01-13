@@ -1,0 +1,83 @@
+{
+  "mim_id": "WantToSendMessage",
+  "skill_id": "jot",
+  "mim_type": "question",
+  "rule_name": "WantToSendMessage",
+  "rule_slots": "yes,no",
+  "screen_slots_available": "false",
+  "sample_utterances": "yes,no",
+  "timeout": "6",
+  "force_confirmation": "false",
+  "barge_in": "true",
+  "photo_quality_light": "false",
+  "notes": "This MiM is only reached after a full, one-minute timeout on the DiscardContinueComplete screen.",
+  "modified": "1/9/2016 10:33:59 AM",
+  "prompts": [
+    {
+      "mim_id": "WantToSendMessage",
+      "prompt_category": "Entry-Core",
+      "prompt_sub_category": "HoldReturn",
+      "index": "",
+      "condition": "",
+      "prompt": "So, do you want to send this message?",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "WantToSendMessage_HoldReturn_"
+    },
+    {
+      "mim_id": "WantToSendMessage",
+      "prompt_category": "Entry-Core",
+      "prompt_sub_category": "Q",
+      "index": "1",
+      "condition": "",
+      "prompt": "Want to send it?",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "WantToSendMessage_Q_1"
+    },
+    {
+      "mim_id": "WantToSendMessage",
+      "prompt_category": "Entry-Core",
+      "prompt_sub_category": "Q",
+      "index": "2",
+      "condition": "",
+      "prompt": "Should I send it for you?",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "WantToSendMessage_Q_2"
+    },
+    {
+      "mim_id": "WantToSendMessage",
+      "prompt_category": "Entry-Core",
+      "prompt_sub_category": "Verbose",
+      "index": "",
+      "condition": "",
+      "prompt": "Do you want to send this message now?",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "WantToSendMessage_Verbose_"
+    },
+    {
+      "mim_id": "WantToSendMessage",
+      "prompt_category": "Errors",
+      "prompt_sub_category": "NI",
+      "index": "1",
+      "condition": "",
+      "prompt": "So, do you want to send it?",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "WantToSendMessage_NI_1"
+    },
+    {
+      "mim_id": "WantToSendMessage",
+      "prompt_category": "Errors",
+      "prompt_sub_category": "NM",
+      "index": "1",
+      "condition": "",
+      "prompt": "Was that Yes or No; want to send this message?",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "WantToSendMessage_NM_1"
+    }
+  ]
+}

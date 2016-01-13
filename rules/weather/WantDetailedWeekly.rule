@@ -1,0 +1,40 @@
+TopRule = ($* $CONTROL $*) {slotAction = CONTROL._slotAction};
+
+#Do you want a day-by-day forecast for the whole week?
+#hey jibo required FALSE
+
+CONTROL =
+		$YES {_slotAction=YES._slotAction} |
+		$NO {_slotAction=NO._slotAction}
+;
+
+YES =
+	(
+		yes  |
+		yeah |
+		sure |
+		yep |
+		certainly |
+		absolutely |
+		definitely |
+		( i (think | suppose | guess) so) |
+		( i do ) |
+		okay |
+		fine |
+		please |
+		(go ahead)
+	)
+{_slotAction='yes'}
+;
+
+NO =
+	(
+		no  |
+		nope |
+		not |
+		don\'t |
+		( do not ) |
+		( i\'m good )
+	)
+{_slotAction='no'}
+;

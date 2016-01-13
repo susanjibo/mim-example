@@ -1,0 +1,39 @@
+{
+  "mim_id": "WaitUntilLater",
+  "skill_id": "jot",
+  "mim_type": "announce",
+  "rule_name": "N/A",
+  "rule_slots": "",
+  "screen_slots_available": "false",
+  "sample_utterances": "",
+  "timeout": "0",
+  "force_confirmation": "false",
+  "barge_in": "false",
+  "photo_quality_light": "false",
+  "notes": "",
+  "modified": "1/7/2016 8:21:19 AM",
+  "prompts": [
+    {
+      "mim_id": "WaitUntilLater",
+      "prompt_category": "Entry-Core",
+      "prompt_sub_category": "AN",
+      "index": "1",
+      "condition": "",
+      "prompt": "Sure, this can wait until later.",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "WaitUntilLater_AN_1"
+    },
+    {
+      "mim_id": "WaitUntilLater",
+      "prompt_category": "Entry-Core",
+      "prompt_sub_category": "AN",
+      "index": "2",
+      "condition": "",
+      "prompt": "No worries.",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "WaitUntilLater_AN_2"
+    }
+  ]
+}

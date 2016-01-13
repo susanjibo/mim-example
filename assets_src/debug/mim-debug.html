@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>mim-debug</title>
+
+
+<script>
+	// change the default namespace for the CreateJS libraries:
+	var pixiflash = pixiflash||{};
+	var createjs = pixiflash;
+</script>
+<script src="https://code.createjs.com/easeljs-0.8.1.min.js"></script>
+<script src="https://code.createjs.com//tweenjs-0.6.1.min.js"></script>
+<script src="https://code.createjs.com//movieclip-0.8.1.min.js"></script>
+<script src="https://code.createjs.com//preloadjs-0.6.1.min.js"></script>
+<script src="mim-debug.js"></script>
+
+<script>
+var canvas, stage, exportRoot;
+
+function init() {
+	canvas = document.getElementById("canvas");
+	pixiflash_images = pixiflash_images||{};
+	ss = ss||{};
+
+	var loader = new pixiflash.LoadQueue(false);
+	loader.addEventListener("fileload", handleFileLoad);
+	loader.addEventListener("complete", handleComplete);
+loader.loadFile({src:"spritesheets/mim_debug_atlas_.json", type:"spritesheet", id:"mim_debug_atlas_"}, true);
+	loader.loadManifest(pixiflash_lib.properties.manifest);
+}
+
+function handleFileLoad(evt) {
+	if (evt.item.type == "image") { pixiflash_images[evt.item.id] = evt.result; }
+}
+
+function handleComplete(evt) {
+	var queue = evt.target;
+	ss["mim_debug_atlas_"] = queue.getResult("mim_debug_atlas_");
+	exportRoot = new pixiflash_lib.mimdebug();
+
+	stage = new pixiflash.Stage(canvas);
+	stage.addChild(exportRoot);
+	stage.update();
+
+	pixiflash.Ticker.setFPS(pixiflash_lib.properties.fps);
+	pixiflash.Ticker.addEventListener("tick", stage);
+}
+</script>
+</head>
+
+<body onload="init();" style="background-color:#D4D4D4">
+	<canvas id="canvas" width="1280" height="720" style="background-color:#000000"></canvas>
+</body>
+</html>

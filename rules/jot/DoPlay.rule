@@ -1,0 +1,8 @@
+TopRule = ($* $D_JOT_INTENTS $*) {domain = 'jot'}{intent = D_JOT_INTENTS._intent};
+
+#No prompt. Jibo just said he'll save the message for later.
+
+D_JOT_INTENTS = $D_JOT_V_DOPLAY {_intent='doPlay'};
+
+D_JOT_V_DOPLAY = ( play ?( it | that ) ) | ( hear ?it );
+

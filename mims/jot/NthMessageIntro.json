@@ -1,0 +1,61 @@
+{
+  "mim_id": "NthMessageIntro",
+  "skill_id": "jot",
+  "mim_type": "optional-response",
+  "rule_name": "MessageManager",
+  "rule_slots": "reply,delete,holdOn,notNow,notRecipient,nextMessage,previousMessage,playAgain,playAudio",
+  "screen_slots_available": "false",
+  "sample_utterances": "lets reply,trash that,hang on a second,save it,im not george,next message please, previous message,play that again please,play his audio",
+  "timeout": "1",
+  "force_confirmation": "false",
+  "barge_in": "true",
+  "photo_quality_light": "false",
+  "notes": "",
+  "modified": "1/13/2016 9:05:06 AM",
+  "prompts": [
+    {
+      "mim_id": "NthMessageIntro",
+      "prompt_category": "Entry-Core",
+      "prompt_sub_category": "AN",
+      "index": "1",
+      "condition": "",
+      "prompt": "Next message:",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "NthMessageIntro_AN_1"
+    },
+    {
+      "mim_id": "NthMessageIntro",
+      "prompt_category": "Entry-Core",
+      "prompt_sub_category": "AN",
+      "index": "2",
+      "condition": "",
+      "prompt": "And the next one:",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "NthMessageIntro_AN_2"
+    },
+    {
+      "mim_id": "NthMessageIntro",
+      "prompt_category": "Entry-Core",
+      "prompt_sub_category": "Crew01",
+      "index": "",
+      "condition": "",
+      "prompt": "This one's from ${crewMember}:",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "NthMessageIntro_Crew01_"
+    },
+    {
+      "mim_id": "NthMessageIntro",
+      "prompt_category": "Entry-Core",
+      "prompt_sub_category": "Crew02",
+      "index": "",
+      "condition": "",
+      "prompt": "${crewMember} left you this one:",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "NthMessageIntro_Crew02_"
+    }
+  ]
+}

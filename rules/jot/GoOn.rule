@@ -1,0 +1,8 @@
+TopRule = ($* $D_JOT_INTENTS $*) {domain='jot'}{intent = D_JOT_INTENTS._intent};
+
+#When you want to hear the rest, say Hey Jibo, go on.
+
+D_JOT_INTENTS = $D_JOT_V_GO_ON {_intent='goOn'};
+
+D_JOT_V_GO_ON = ( ?(hey jibo) (go on)|continue );
+

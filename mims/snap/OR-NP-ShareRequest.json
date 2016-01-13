@@ -1,0 +1,28 @@
+{
+  "mim_id": "OR-NP-ShareRequest",
+  "skill_id": "snap",
+  "mim_type": "optional-response",
+  "rule_name": "DoTake_SharePhoto",
+  "rule_slots": "[doTake, sharePhoto]",
+  "screen_slots_available": "false",
+  "sample_utterances": "Can you share this?",
+  "timeout": "10",
+  "force_confirmation": "false",
+  "barge_in": "true",
+  "photo_quality_light": "false",
+  "notes": "No prompt.",
+  "modified": "1/7/2016 8:21:54 AM",
+  "prompts": [
+    {
+      "mim_id": "OR-NP-ShareRequest",
+      "prompt_category": "Silence",
+      "prompt_sub_category": "Silence",
+      "index": "",
+      "condition": "",
+      "prompt": "",
+      "media": "",
+      "extra": "",
+      "prompt_id": "OR-NP-ShareRequest_Silence_"
+    }
+  ]
+}

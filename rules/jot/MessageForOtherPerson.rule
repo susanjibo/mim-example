@@ -1,0 +1,4 @@
+TopRule = ($* $YESNO $*) {domain = 'jot'}{intent = YESNO._intent};
+
+YESNO = $factory:yes_no{_intent=yes_no._nl};
+

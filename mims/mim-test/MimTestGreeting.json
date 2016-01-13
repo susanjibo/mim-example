@@ -1,0 +1,28 @@
+{
+  "mim_id": "MimTestGreeting",
+  "skill_id": "mim-test",
+  "mim_type": "announce",
+  "rule_name": "MimTestCompliment",
+  "rule_slots": "slotAction",
+  "screen_slots_available": "false",
+  "sample_utterances": "thanks,you too,i know,thanks jibo",
+  "timeout": "0",
+  "force_confirmation": "false",
+  "barge_in": "true",
+  "photo_quality_light": "false",
+  "notes": "",
+  "modified": "1/7/2016 8:21:19 AM",
+  "prompts": [
+    {
+      "mim_id": "MimTestGreeting",
+      "prompt_category": "Entry-Core",
+      "prompt_sub_category": "AN",
+      "index": "1",
+      "condition": "",
+      "prompt": "Hello, ${userName}. Let me know how I can help you.",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "MimTestGreeting_AN_1"
+    }
+  ]
+}

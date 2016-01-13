@@ -1,0 +1,28 @@
+{
+  "mim_id": "MimTestPizzOrderSummary",
+  "skill_id": "mim-test",
+  "mim_type": "question",
+  "rule_name": "MimTestYesNo",
+  "rule_slots": "slotAction",
+  "screen_slots_available": "true",
+  "sample_utterances": "yes,no",
+  "timeout": "4",
+  "force_confirmation": "false",
+  "barge_in": "true",
+  "photo_quality_light": "false",
+  "notes": "",
+  "modified": "1/9/2016 10:33:59 AM",
+  "prompts": [
+    {
+      "mim_id": "MimTestPizzOrderSummary",
+      "prompt_category": "Entry-Core",
+      "prompt_sub_category": "Q",
+      "index": "1",
+      "condition": "",
+      "prompt": "OK ${userName}, I will order you ${pizzaOrder} ${pizzaDeliveryMode}. Right?",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "MimTestPizzOrderSummary_Q_1"
+    }
+  ]
+}

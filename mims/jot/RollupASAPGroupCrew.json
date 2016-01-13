@@ -1,0 +1,39 @@
+{
+  "mim_id": "RollupASAPGroupCrew",
+  "skill_id": "jot",
+  "mim_type": "optional-response",
+  "rule_name": "MessageRollup",
+  "rule_slots": "cancelMessage,addRecipient,removeRecipient,changeRecipient,changeDeliveryTime,editContent,createNewMessage",
+  "screen_slots_available": "false",
+  "sample_utterances": "cancel,include george,remove jane,send it to elroy instead,instead i want you to send this on thursday,change the message,start over again",
+  "timeout": "1",
+  "force_confirmation": "false",
+  "barge_in": "true",
+  "photo_quality_light": "false",
+  "notes": "",
+  "modified": "1/13/2016 9:06:48 AM",
+  "prompts": [
+    {
+      "mim_id": "RollupASAPGroupCrew",
+      "prompt_category": "Entry-Core",
+      "prompt_sub_category": "AN",
+      "index": "1",
+      "condition": "",
+      "prompt": "I'll send them notifications right now.",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "RollupASAPGroupCrew_AN_1"
+    },
+    {
+      "mim_id": "RollupASAPGroupCrew",
+      "prompt_category": "Entry-Core",
+      "prompt_sub_category": "Truncated",
+      "index": "",
+      "condition": "",
+      "prompt": "I'll let them know.",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "RollupASAPGroupCrew_Truncated_"
+    }
+  ]
+}

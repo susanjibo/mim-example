@@ -1,0 +1,39 @@
+{
+  "mim_id": "RollupGroupMixed",
+  "skill_id": "jot",
+  "mim_type": "optional-response",
+  "rule_name": "MessageRollup",
+  "rule_slots": "cancelMessage,addRecipient,removeRecipient,changeRecipient,changeDeliveryTime,editContent,createNewMessage",
+  "screen_slots_available": "false",
+  "sample_utterances": "cancel,include george,remove jane,send it to elroy instead,instead i want you to send this on thursday,change the message,start over again",
+  "timeout": "1",
+  "force_confirmation": "false",
+  "barge_in": "true",
+  "photo_quality_light": "false",
+  "notes": "",
+  "modified": "1/13/2016 9:07:19 AM",
+  "prompts": [
+    {
+      "mim_id": "RollupGroupMixed",
+      "prompt_category": "Entry-Core",
+      "prompt_sub_category": "AN",
+      "index": "1",
+      "condition": "",
+      "prompt": "Okay, I'll let ${crewMember} know when I see them next and I'll send an email to ${contactName}.",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "RollupGroupMixed_AN_1"
+    },
+    {
+      "mim_id": "RollupGroupMixed",
+      "prompt_category": "Entry-Core",
+      "prompt_sub_category": "AN",
+      "index": "2",
+      "condition": "",
+      "prompt": "Sure thing. I'll let ${crewMember} know when I see them, and I'll send an email now to ${contactName}.",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "RollupGroupMixed_AN_2"
+    }
+  ]
+}

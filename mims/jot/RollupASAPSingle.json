@@ -1,0 +1,61 @@
+{
+  "mim_id": "RollupASAPSingle",
+  "skill_id": "jot",
+  "mim_type": "optional-response",
+  "rule_name": "MessageRollup",
+  "rule_slots": "cancelMessage,addRecipient,removeRecipient,changeRecipient,changeDeliveryTime,editContent,createNewMessage",
+  "screen_slots_available": "false",
+  "sample_utterances": "cancel,include george,remove jane,send it to elroy instead,instead i want you to send this on thursday,change the message,start over again",
+  "timeout": "1",
+  "force_confirmation": "false",
+  "barge_in": "true",
+  "photo_quality_light": "false",
+  "notes": "",
+  "modified": "1/13/2016 9:07:02 AM",
+  "prompts": [
+    {
+      "mim_id": "RollupASAPSingle",
+      "prompt_category": "Entry-Core",
+      "prompt_sub_category": "AN",
+      "index": "1",
+      "condition": "${recipient.gender == 'male'}",
+      "prompt": "I'll send him a notification right away.",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "RollupASAPSingle_AN_1"
+    },
+    {
+      "mim_id": "RollupASAPSingle",
+      "prompt_category": "Entry-Core",
+      "prompt_sub_category": "AN",
+      "index": "1",
+      "condition": "${recipient.gender == 'female'}",
+      "prompt": "I'll send her a notification right away.",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "RollupASAPSingle_AN_1"
+    },
+    {
+      "mim_id": "RollupASAPSingle",
+      "prompt_category": "Entry-Core",
+      "prompt_sub_category": "TruncatedFemale",
+      "index": "",
+      "condition": "${recipient.gender == 'female'}",
+      "prompt": "Alerting her now!",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "RollupASAPSingle_TruncatedFemale_"
+    },
+    {
+      "mim_id": "RollupASAPSingle",
+      "prompt_category": "Entry-Core",
+      "prompt_sub_category": "TruncatedMale",
+      "index": "",
+      "condition": "${recipient.gender == 'male'}",
+      "prompt": "Alerting him now!",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "RollupASAPSingle_TruncatedMale_"
+    }
+  ]
+}

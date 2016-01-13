@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mim Test Container</title>
+    <link rel="stylesheet" type="text/css" href="styles/main.css" />
+
+    <script src="./deps/pixijs/pixi.min.js"></script>
+    <script src="./deps/createjs/tweenjs-NEXT.min.js"></script>
+    <script src="./deps/pixi-flash/pixi-flash.js"></script>
+    <script src="./assets/debug/mim-debug.js"></script>
+
+</head>
+<body>
+    <div id="eye"></div>
+    <canvas id="canvas" style="border: none;" width="1280" height="720"></canvas>
+    <div id="ui"></div>
+    <script>
+        require('babel-core/register');
+        require('behaviorify/register');
+        require('./src/main');
+    </script>
+</body>
+</html>

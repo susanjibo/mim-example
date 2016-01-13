@@ -1,0 +1,28 @@
+TopRule = $* $RESPONSE {slotAction = RESPONSE._slotAction} $*;
+
+#Optional Response to compliment
+
+RESPONSE =
+		$THANKS {_slotAction=THANKS._slotAction} |
+    $CANCEL {_slotAction=CANCEL._slotAction} |
+		$COMPLIMENT {_slotAction=COMPLIMENT._slotAction};
+
+THANKS =
+	(
+	  (thanks) |
+		(thank)
+	) {_slotAction='thanks'};
+
+CANCEL =
+	(
+	  (?I change?d ?my mind) |
+		(cancel) |
+		(forget it)
+	) {_slotAction='cancel'};
+
+COMPLIMENT =
+  (
+    ((you | youre) $* rock) |
+    ((you | youre) $* awesome) |
+    ((you | youre) $* best)
+  ) {_slotAction='compliment'};

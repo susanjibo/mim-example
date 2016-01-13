@@ -1,0 +1,83 @@
+{
+  "mim_id": "TakeAnotherPhoto",
+  "skill_id": "snap",
+  "mim_type": "question",
+  "rule_name": "WantToShootMore",
+  "rule_slots": "[yes, no]",
+  "screen_slots_available": "false",
+  "sample_utterances": "Why not.",
+  "timeout": "6",
+  "force_confirmation": "false",
+  "barge_in": "true",
+  "photo_quality_light": "true",
+  "notes": "",
+  "modified": "1/9/2016 10:33:59 AM",
+  "prompts": [
+    {
+      "mim_id": "TakeAnotherPhoto",
+      "prompt_category": "Entry-Core",
+      "prompt_sub_category": "HoldReturn",
+      "index": "",
+      "condition": "",
+      "prompt": "So, should I take another picture?",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "TakeAnotherPhoto_HoldReturn_"
+    },
+    {
+      "mim_id": "TakeAnotherPhoto",
+      "prompt_category": "Entry-Core",
+      "prompt_sub_category": "Q",
+      "index": "1",
+      "condition": "",
+      "prompt": "Another?",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "TakeAnotherPhoto_Q_1"
+    },
+    {
+      "mim_id": "TakeAnotherPhoto",
+      "prompt_category": "Entry-Core",
+      "prompt_sub_category": "Q",
+      "index": "2",
+      "condition": "",
+      "prompt": "Take another one?",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "TakeAnotherPhoto_Q_2"
+    },
+    {
+      "mim_id": "TakeAnotherPhoto",
+      "prompt_category": "Entry-Core",
+      "prompt_sub_category": "Verbose",
+      "index": "",
+      "condition": "",
+      "prompt": "Would you like me to take another picture?",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "TakeAnotherPhoto_Verbose_"
+    },
+    {
+      "mim_id": "TakeAnotherPhoto",
+      "prompt_category": "Errors",
+      "prompt_sub_category": "NI",
+      "index": "1",
+      "condition": "",
+      "prompt": "So do you want me to take another one?",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "TakeAnotherPhoto_NI_1"
+    },
+    {
+      "mim_id": "TakeAnotherPhoto",
+      "prompt_category": "Errors",
+      "prompt_sub_category": "NM",
+      "index": "1",
+      "condition": "",
+      "prompt": "Sorry, was that Yes or No; do you want me to take another picture?",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "TakeAnotherPhoto_NM_1"
+    }
+  ]
+}

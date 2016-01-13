@@ -1,0 +1,50 @@
+{
+  "mim_id": "MimTestWaitForOrderPizza",
+  "skill_id": "mim-test",
+  "mim_type": "question",
+  "rule_name": "MimTestWaitForOrderPizza",
+  "rule_slots": "slotAction",
+  "screen_slots_available": "true",
+  "sample_utterances": "order pizza,please order me a pizza",
+  "timeout": "4",
+  "force_confirmation": "false",
+  "barge_in": "true",
+  "photo_quality_light": "false",
+  "notes": "",
+  "modified": "1/12/2016 10:18:03 PM",
+  "prompts": [
+    {
+      "mim_id": "MimTestWaitForOrderPizza",
+      "prompt_category": "Entry-Core",
+      "prompt_sub_category": "Q",
+      "index": "1",
+      "condition": "",
+      "prompt": "Hello, ${userName}. Let me know how I can help you.",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "MimTestWaitForOrderPizza_Q_1"
+    },
+    {
+      "mim_id": "MimTestWaitForOrderPizza",
+      "prompt_category": "Errors",
+      "prompt_sub_category": "NI",
+      "index": "1",
+      "condition": "",
+      "prompt": "So, ${userName}. Let me know how I can help you.",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "MimTestWaitForOrderPizza_NI_1"
+    },
+    {
+      "mim_id": "MimTestWaitForOrderPizza",
+      "prompt_category": "Errors",
+      "prompt_sub_category": "NM",
+      "index": "1",
+      "condition": "",
+      "prompt": "For example, I can help you order pizza.",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "MimTestWaitForOrderPizza_NM_1"
+    }
+  ]
+}

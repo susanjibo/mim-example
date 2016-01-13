@@ -1,0 +1,28 @@
+{
+  "mim_id": "DiscardContinueComplete",
+  "skill_id": "jot",
+  "mim_type": "optional-response",
+  "rule_name": "DiscardContinueComplete",
+  "rule_slots": "complete,discard,continue",
+  "screen_slots_available": "true",
+  "sample_utterances": "delete,continue,finish",
+  "timeout": "60",
+  "force_confirmation": "false",
+  "barge_in": "true",
+  "photo_quality_light": "false",
+  "notes": "No prompts.",
+  "modified": "1/8/2016 4:11:07 PM",
+  "prompts": [
+    {
+      "mim_id": "DiscardContinueComplete",
+      "prompt_category": "Silence",
+      "prompt_sub_category": "Silence",
+      "index": "",
+      "condition": "",
+      "prompt": "",
+      "media": "",
+      "extra": "",
+      "prompt_id": "DiscardContinueComplete_Silence_"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+TopGrammar = ($* $CHOICE $*) {slotAction = CHOICE._slotAction};
+
+#Take red pill or blue pill?
+
+CHOICE =
+		$RED {_slotAction=RED._slotAction} |
+		$BLUE {_slotAction=BLUE._slotAction};
+
+RED = (
+		(?the red ?pill) |
+		(not ?the blue ?pill)
+	  ) {_slotAction='red'};
+
+BLUE =
+	(
+		(?the blue ?pill) |
+		(not ?the red ?pill)
+	) {_slotAction='blue'};

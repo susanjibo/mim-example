@@ -1,0 +1,61 @@
+{
+  "mim_id": "RollupGroupCrew",
+  "skill_id": "jot",
+  "mim_type": "optional-response",
+  "rule_name": "MessageRollup",
+  "rule_slots": "cancelMessage,addRecipient,removeRecipient,changeRecipient,changeDeliveryTime,editContent,createNewMessage",
+  "screen_slots_available": "false",
+  "sample_utterances": "cancel,include george,remove jane,send it to elroy instead,instead i want you to send this on thursday,change the message,start over again",
+  "timeout": "1",
+  "force_confirmation": "false",
+  "barge_in": "true",
+  "photo_quality_light": "false",
+  "notes": "",
+  "modified": "1/13/2016 9:07:12 AM",
+  "prompts": [
+    {
+      "mim_id": "RollupGroupCrew",
+      "prompt_category": "Entry-Core",
+      "prompt_sub_category": "AN",
+      "index": "1",
+      "condition": "",
+      "prompt": "Okay! I'll tell them when I see them.",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "RollupGroupCrew_AN_1"
+    },
+    {
+      "mim_id": "RollupGroupCrew",
+      "prompt_category": "Entry-Core",
+      "prompt_sub_category": "AN",
+      "index": "2",
+      "condition": "",
+      "prompt": "I'll let them know as soon as I see them.",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "RollupGroupCrew_AN_2"
+    },
+    {
+      "mim_id": "RollupGroupCrew",
+      "prompt_category": "Entry-Core",
+      "prompt_sub_category": "Reminder",
+      "index": "",
+      "condition": "${jotType == 'reminder'}",
+      "prompt": "I'll remind them when I see them!",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "RollupGroupCrew_Reminder_"
+    },
+    {
+      "mim_id": "RollupGroupCrew",
+      "prompt_category": "Entry-Core",
+      "prompt_sub_category": "Truncated",
+      "index": "",
+      "condition": "",
+      "prompt": "I'll let 'em know.",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "RollupGroupCrew_Truncated_"
+    }
+  ]
+}

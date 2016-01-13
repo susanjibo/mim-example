@@ -1,0 +1,28 @@
+{
+  "mim_id": "HoldOnMessageFirstTime",
+  "skill_id": "jot",
+  "mim_type": "optional-response",
+  "rule_name": "GoOn",
+  "rule_slots": "goOn",
+  "screen_slots_available": "true",
+  "sample_utterances": "Hey Jibo go on,go on",
+  "timeout": "900",
+  "force_confirmation": "false",
+  "barge_in": "true",
+  "photo_quality_light": "false",
+  "notes": "Needs Hey, Jibo",
+  "modified": "1/12/2016 10:18:49 PM",
+  "prompts": [
+    {
+      "mim_id": "HoldOnMessageFirstTime",
+      "prompt_category": "Entry-Core",
+      "prompt_sub_category": "AN",
+      "index": "1",
+      "condition": "",
+      "prompt": "Sure thing, ${crewMember}. When you want to hear the rest, say, \"Hey Jibo, go on.\"",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "HoldOnMessageFirstTime_AN_1"
+    }
+  ]
+}

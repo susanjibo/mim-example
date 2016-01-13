@@ -1,0 +1,489 @@
+{
+    "1": {
+        "id": 1,
+        "class": "Sequence",
+        "name": "Skill Loops Always",
+        "args": [],
+        "children": [
+            15,
+            47,
+            11,
+            37,
+            41,
+            39,
+            42
+        ],
+        "decorators": [
+            13
+        ]
+    },
+    "8": {
+        "id": 8,
+        "class": "Switch",
+        "name": "Need to Get Size",
+        "asset-pack": "core",
+        "parent": 11,
+        "args": [],
+        "children": [
+            35
+        ]
+    },
+    "11": {
+        "id": 11,
+        "class": "Sequence",
+        "name": "Get Pizza Order",
+        "asset-pack": "core",
+        "parent": 1,
+        "args": [],
+        "children": [
+            34,
+            8,
+            19,
+            36
+        ],
+        "decorators": [
+            14
+        ]
+    },
+    "13": {
+        "id": 13,
+        "class": "WhileCondition",
+        "name": "",
+        "asset-pack": "core",
+        "args": [
+            [
+                "() => {",
+                "}"
+            ],
+            [
+                "() => {",
+                "   return true;",
+                "}"
+            ]
+        ]
+    },
+    "14": {
+        "id": 14,
+        "class": "WhileCondition",
+        "name": "",
+        "asset-pack": "core",
+        "args": [
+            [
+                "() => {",
+                "}"
+            ],
+            [
+                "() => {",
+                "   return notepad.wantsAnother;",
+                "}"
+            ]
+        ]
+    },
+    "15": {
+        "id": 15,
+        "class": "ExecuteScript",
+        "name": "Init Notepad",
+        "asset-pack": "core",
+        "parent": 1,
+        "args": [
+            [
+                "() => {",
+                "  notepad.pizzas = [];",
+                "  notepad.pizzaSize = '';",
+                "  notepad.pizzaType = '';",
+                "  notepad.deliveryChoice = '';",
+                "  notepad.wantsAnother  = false;",
+                "  notepad.userName = 'Andrew';",
+                "  notepad.haveUserName = true;",
+                "  notepad.summaryStart = true;",
+                "  //jibo.asr.setLogging(true);",
+                "  ",
+                "  let path = require ('path');",
+                "\tnotepad.rulesPath = path.resolve(__dirname, '../rules/mim-test');",
+                "  notepad.mimsPath =  path.resolve(__dirname, '../mims/mim-test');",
+                "}"
+            ]
+        ]
+    },
+    "19": {
+        "id": 19,
+        "class": "ExecuteScript",
+        "name": "Add Pizza to order",
+        "asset-pack": "core",
+        "parent": 11,
+        "args": [
+            [
+                "() => {",
+                "  let pizza = { type: notepad.pizzaType, size: notepad.pizzaSize };",
+                "  notepad.pizzas.push(pizza);",
+                "}"
+            ]
+        ]
+    },
+    "34": {
+        "id": 34,
+        "class": "Mim",
+        "name": "Size and Type",
+        "asset-pack": "project",
+        "parent": 11,
+        "args": [
+            [
+                "() =>  {",
+                "\treturn {",
+                "\t\tmimId: 'MimTestPizzaSizeAndType',",
+                "\t\trulesPath: notepad.rulesPath,",
+                "\t\tmimsPath: notepad.mimsPath,",
+                "\t\tpromptData: {",
+                "\t\t\tuserName: notepad.userName",
+                "\t\t}",
+                "\t}",
+                "}"
+            ],
+            [
+                "(status) =>  {",
+                "}"
+            ],
+            [
+                "(results) =>  {",
+                "  console.log(`main.bt: MimTestPizzaSizeAndType: onResults: `);",
+                "  console.log(results);",
+                "",
+                "  let nlParse = results.asrResults.nlParse;",
+                "  let pizzaType = nlParse.slotAction;",
+                "  let pizzaSize = nlParse.slotPizzaSize;",
+                "  ",
+                "  console.log('Pizza type: ' + pizzaType);",
+                "  notepad.pizzaType = pizzaType;",
+                "  ",
+                "  console.log('Pizza size: ' + pizzaSize);",
+                "  notepad.pizzaSize = pizzaSize;",
+                "}"
+            ]
+        ]
+    },
+    "35": {
+        "id": 35,
+        "class": "Mim",
+        "name": "Size",
+        "asset-pack": "project",
+        "parent": 8,
+        "args": [
+            [
+                "() =>  {",
+                "\treturn {",
+                "\t\tmimId: 'MimTestPizzaSize',",
+                "\t\trulesPath: notepad.rulesPath,",
+                "\t\tmimsPath: notepad.mimsPath,",
+                "\t\tpromptData: {",
+                "\t\t\tuserName: notepad.userName",
+                "\t\t}",
+                "\t}",
+                "}"
+            ],
+            [
+                "(status) =>  {",
+                "}"
+            ],
+            [
+                "(results) =>  {",
+                "  console.log(`main.bt: MimTestPizzaSize: onResults: `);",
+                "  console.log(results);",
+                "",
+                "  let nlParse = results.asrResults.nlParse;",
+                "  let pizzaSize = nlParse.slotAction;",
+                "    ",
+                "  console.log('Pizza size: ' + pizzaSize);",
+                "  notepad.pizzaSize = pizzaSize;",
+                "}"
+            ]
+        ],
+        "decorators": [
+            38
+        ]
+    },
+    "36": {
+        "id": 36,
+        "class": "Mim",
+        "name": "Another?",
+        "asset-pack": "project",
+        "parent": 11,
+        "args": [
+            [
+                "() =>  {",
+                "\treturn {",
+                "\t\tmimId: 'MimTestWantAnotherPizza',",
+                "\t\trulesPath: notepad.rulesPath,",
+                "\t\tmimsPath: notepad.mimsPath,",
+                "\t\tpromptData: {",
+                "\t\t\tuserName: notepad.userName",
+                "\t\t}",
+                "\t}",
+                "}"
+            ],
+            [
+                "(status) =>  {",
+                "}"
+            ],
+            [
+                "(results) =>  {",
+                "  console.log(`main.bt: MimTestWantAnotherPizza: onResults: `);",
+                "  console.log(results);",
+                "",
+                "  let nlParse = results.asrResults.nlParse;",
+                "  let yesNo = nlParse.slotAction;",
+                "    ",
+                "  console.log('Want another: ' + yesNo);",
+                "  notepad.wantsAnother = false;",
+                "  if (yesNo === 'yes') {",
+                "    notepad.wantsAnother = true;",
+                "  }",
+                "}"
+            ]
+        ]
+    },
+    "37": {
+        "id": 37,
+        "class": "Mim",
+        "name": "Pizza Delivery",
+        "asset-pack": "project",
+        "parent": 1,
+        "args": [
+            [
+                "() =>  {",
+                "\treturn {",
+                "\t\tmimId: 'MimTestPizzaDelivery',",
+                "\t\trulesPath: notepad.rulesPath,",
+                "\t\tmimsPath: notepad.mimsPath,",
+                "\t\tpromptData: {",
+                "\t\t\tuserName: notepad.userName",
+                "\t\t}",
+                "\t}",
+                "}"
+            ],
+            [
+                "(status) =>  {",
+                "}"
+            ],
+            [
+                "(results) =>  {",
+                "  console.log(`main.bt: MimTestPizzaDelivery: onResults: `);",
+                "  console.log(results);",
+                "",
+                "  let nlParse = results.asrResults.nlParse;",
+                "  let deliveryChoice = nlParse.slotAction;",
+                "    ",
+                "  console.log('Delivery choice: ' + deliveryChoice);",
+                "  notepad.deliveryChoice = deliveryChoice;",
+                "}"
+            ]
+        ]
+    },
+    "38": {
+        "id": 38,
+        "class": "Case",
+        "name": "",
+        "asset-pack": "core",
+        "args": [
+            [
+                "() => {",
+                "  return !notepad.pizzaSize;",
+                "}"
+            ]
+        ]
+    },
+    "39": {
+        "id": 39,
+        "class": "Mim",
+        "name": "Order Summary",
+        "asset-pack": "project",
+        "parent": 1,
+        "args": [
+            [
+                "() =>  {",
+                "\treturn {",
+                "\t\tmimId: 'MimTestPizzOrderSummary',",
+                "\t\trulesPath: notepad.rulesPath,",
+                "\t\tmimsPath: notepad.mimsPath,",
+                "\t\tpromptData: {",
+                "\t\t\tuserName: notepad.userName,",
+                "\t\t\tpizzaOrder: notepad.pizzaOrderSummaryText,",
+                "\t\t\tpizzaDeliveryMode: `for ${notepad.deliveryChoice}`",
+                "\t\t}",
+                "\t}",
+                "}"
+            ],
+            [
+                "(status) =>  {",
+                "}"
+            ],
+            [
+                "(results) =>  {",
+                "  console.log(`main.bt: MimTestPizzOrderSummary: onResults: `);",
+                "  console.log(results);",
+                "",
+                "  let nlParse = results.asrResults.nlParse;",
+                "  let orderConfirmed = nlParse.slotAction;",
+                "    ",
+                "  console.log('Order confirmed: ' + orderConfirmed);",
+                "  notepad.orderConfirmed = (orderConfirmed === 'yes');",
+                "}"
+            ]
+        ]
+    },
+    "41": {
+        "id": 41,
+        "class": "ExecuteScript",
+        "name": "Generate order summary",
+        "asset-pack": "core",
+        "parent": 1,
+        "args": [
+            [
+                "() => {",
+                "  ",
+                "  notepad.pizzaOrderSummaryText = '';",
+                "  ",
+                "  notepad.pizzas.forEach(pizza => {",
+                "    notepad.pizzaOrderSummaryText += `a ${pizza.size} ${pizza.type}, `;",
+                "  });",
+                "}"
+            ]
+        ]
+    },
+    "42": {
+        "id": 42,
+        "class": "Switch",
+        "name": "Order Confirmation Check",
+        "asset-pack": "core",
+        "parent": 1,
+        "args": [],
+        "children": [
+            43,
+            44
+        ]
+    },
+    "43": {
+        "id": 43,
+        "class": "Mim",
+        "name": "Glad I could help",
+        "asset-pack": "project",
+        "parent": 42,
+        "args": [
+            [
+                "() =>  {",
+                "\treturn {",
+                "\t\tmimId: 'MimTestGladToHelp',",
+                "\t\trulesPath: notepad.rulesPath,",
+                "\t\tmimsPath: notepad.mimsPath,",
+                "\t\tpromptData: {",
+                "\t\t\tuserName: notepad.userName",
+                "\t\t}",
+                "\t}",
+                "}"
+            ],
+            [
+                "(status) =>  {",
+                "}"
+            ],
+            [
+                "(results) =>  {",
+                "  console.log(`main.bt: MimTestGladToHelp: onResults: `);",
+                "  console.log(results);",
+                "}"
+            ]
+        ],
+        "decorators": [
+            45
+        ]
+    },
+    "44": {
+        "id": 44,
+        "class": "Mim",
+        "name": "OK, scratch that",
+        "asset-pack": "project",
+        "parent": 42,
+        "args": [
+            [
+                "() =>  {",
+                "\treturn {",
+                "\t\tmimId: 'MimTestScratchThat',",
+                "\t\trulesPath: notepad.rulesPath,",
+                "\t\tmimsPath: notepad.mimsPath,",
+                "\t\tpromptData: {",
+                "\t\t\tuserName: notepad.userName",
+                "\t\t}",
+                "\t}",
+                "}"
+            ],
+            [
+                "(status) =>  {",
+                "}"
+            ],
+            [
+                "(results) =>  {",
+                "  console.log(`main.bt: MimTestScratchThat: onResults: `);",
+                "  console.log(results);",
+                "}"
+            ]
+        ],
+        "decorators": [
+            46
+        ]
+    },
+    "45": {
+        "id": 45,
+        "class": "Case",
+        "name": "",
+        "asset-pack": "core",
+        "args": [
+            [
+                "() => {",
+                "  return notepad.orderConfirmed",
+                "}"
+            ]
+        ]
+    },
+    "46": {
+        "id": 46,
+        "class": "Case",
+        "name": "",
+        "asset-pack": "core",
+        "args": [
+            [
+                "() => {",
+                "  return !notepad.orderConfirmed",
+                "}"
+            ]
+        ]
+    },
+    "47": {
+        "id": 47,
+        "class": "Mim",
+        "name": "Wait for 'order pizza'",
+        "asset-pack": "project",
+        "parent": 1,
+        "args": [
+            [
+                "() =>  {",
+                "\treturn {",
+                "\t\tmimId: 'MimTestWaitForOrderPizza',",
+                "\t\trulesPath: notepad.rulesPath,",
+                "\t\tmimsPath: notepad.mimsPath,",
+                "\t\tpromptData: {",
+                "\t\t\tuserName: notepad.userName",
+                "\t\t}",
+                "\t}",
+                "}"
+            ],
+            [
+                "(status) =>  {",
+                "}"
+            ],
+            [
+                "(results) =>  {",
+                "  console.log(`main.bt: MimTestWaitForOrderPizza: onResults: `);",
+                "  console.log(results);",
+                "}"
+            ]
+        ]
+    }
+}

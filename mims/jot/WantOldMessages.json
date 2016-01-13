@@ -1,0 +1,83 @@
+{
+  "mim_id": "WantOldMessages",
+  "skill_id": "jot",
+  "mim_type": "question",
+  "rule_name": "WantOldMessages",
+  "rule_slots": "yes,no",
+  "screen_slots_available": "false",
+  "sample_utterances": "yes,I guess not",
+  "timeout": "6",
+  "force_confirmation": "false",
+  "barge_in": "true",
+  "photo_quality_light": "false",
+  "notes": "",
+  "modified": "1/13/2016 9:08:33 AM",
+  "prompts": [
+    {
+      "mim_id": "WantOldMessages",
+      "prompt_category": "Entry-Core",
+      "prompt_sub_category": "HoldReturn",
+      "index": "",
+      "condition": "",
+      "prompt": "So, do you want to hear your old messages?",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "WantOldMessages_HoldReturn_"
+    },
+    {
+      "mim_id": "WantOldMessages",
+      "prompt_category": "Entry-Core",
+      "prompt_sub_category": "Q",
+      "index": "1",
+      "condition": "",
+      "prompt": "No new ones here; wanna hear your old messages?",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "WantOldMessages_Q_1"
+    },
+    {
+      "mim_id": "WantOldMessages",
+      "prompt_category": "Entry-Core",
+      "prompt_sub_category": "Q",
+      "index": "2",
+      "condition": "",
+      "prompt": "I've only got old messages; wanna hear them?",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "WantOldMessages_Q_2"
+    },
+    {
+      "mim_id": "WantOldMessages",
+      "prompt_category": "Entry-Core",
+      "prompt_sub_category": "Verbose",
+      "index": "",
+      "condition": "",
+      "prompt": "I don't have any new ones; do you want to hear your old messages?",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "WantOldMessages_Verbose_"
+    },
+    {
+      "mim_id": "WantOldMessages",
+      "prompt_category": "Errors",
+      "prompt_sub_category": "NI",
+      "index": "1",
+      "condition": "",
+      "prompt": "Want to hear old messages?",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "WantOldMessages_NI_1"
+    },
+    {
+      "mim_id": "WantOldMessages",
+      "prompt_category": "Errors",
+      "prompt_sub_category": "NM",
+      "index": "1",
+      "condition": "",
+      "prompt": "Sorry, was that Yes or No? Want to hear your old messages?",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "WantOldMessages_NM_1"
+    }
+  ]
+}

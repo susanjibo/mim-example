@@ -1,0 +1,39 @@
+{
+  "mim_id": "FailureToPostMessage",
+  "skill_id": "jot",
+  "mim_type": "announce",
+  "rule_name": "N/A",
+  "rule_slots": "",
+  "screen_slots_available": "false",
+  "sample_utterances": "",
+  "timeout": "0",
+  "force_confirmation": "false",
+  "barge_in": "false",
+  "photo_quality_light": "false",
+  "notes": "",
+  "modified": "1/7/2016 8:21:19 AM",
+  "prompts": [
+    {
+      "mim_id": "FailureToPostMessage",
+      "prompt_category": "Entry-Core",
+      "prompt_sub_category": "AN",
+      "index": "1",
+      "condition": "${creator.social == 'facebook'}",
+      "prompt": "There was a problem over at Facebook and I wasn't able to post this message. Sorry!",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "FailureToPostMessage_AN_1"
+    },
+    {
+      "mim_id": "FailureToPostMessage",
+      "prompt_category": "Entry-Core",
+      "prompt_sub_category": "AN",
+      "index": "1",
+      "condition": "${creator.social == 'twitter'}",
+      "prompt": "There was a problem over at Twitter and I wasn't able to post this message. Sorry!",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "FailureToPostMessage_AN_1"
+    }
+  ]
+}

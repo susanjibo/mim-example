@@ -1,0 +1,39 @@
+{
+  "mim_id": "RollupSocialTimebomb",
+  "skill_id": "jot",
+  "mim_type": "optional-response",
+  "rule_name": "MessageRollup",
+  "rule_slots": "cancelMessage,addRecipient,removeRecipient,changeRecipient,changeDeliveryTime,editContent,createNewMessage",
+  "screen_slots_available": "false",
+  "sample_utterances": "cancel,include george,remove jane,send it to elroy instead,instead i want you to send this on thursday,change the message,start over again",
+  "timeout": "1",
+  "force_confirmation": "false",
+  "barge_in": "true",
+  "photo_quality_light": "false",
+  "notes": "",
+  "modified": "1/13/2016 9:07:43 AM",
+  "prompts": [
+    {
+      "mim_id": "RollupSocialTimebomb",
+      "prompt_category": "Entry-Core",
+      "prompt_sub_category": "AN",
+      "index": "1",
+      "condition": "${recipient.social == 'facebook'}",
+      "prompt": "Okay, I'll post it ${timeFrame}.",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "RollupSocialTimebomb_AN_1"
+    },
+    {
+      "mim_id": "RollupSocialTimebomb",
+      "prompt_category": "Entry-Core",
+      "prompt_sub_category": "AN",
+      "index": "1",
+      "condition": "${recipient.social == 'twitter'}",
+      "prompt": "Alright, I'll tweet that ${timeFrame}.",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "RollupSocialTimebomb_AN_1"
+    }
+  ]
+}

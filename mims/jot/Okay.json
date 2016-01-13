@@ -1,0 +1,28 @@
+{
+  "mim_id": "Okay",
+  "skill_id": "jot",
+  "mim_type": "announce",
+  "rule_name": "N/A",
+  "rule_slots": "",
+  "screen_slots_available": "false",
+  "sample_utterances": "",
+  "timeout": "0",
+  "force_confirmation": "false",
+  "barge_in": "false",
+  "photo_quality_light": "false",
+  "notes": "",
+  "modified": "1/7/2016 8:21:19 AM",
+  "prompts": [
+    {
+      "mim_id": "Okay",
+      "prompt_category": "Entry-Core",
+      "prompt_sub_category": "AN",
+      "index": "1",
+      "condition": "",
+      "prompt": "Okay!",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "Okay_AN_1"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "mim_id": "RecallSocialPost",
+  "skill_id": "jot",
+  "mim_type": "announce",
+  "rule_name": "N/A",
+  "rule_slots": "",
+  "screen_slots_available": "false",
+  "sample_utterances": "",
+  "timeout": "0",
+  "force_confirmation": "false",
+  "barge_in": "false",
+  "photo_quality_light": "false",
+  "notes": "",
+  "modified": "1/7/2016 8:21:19 AM",
+  "prompts": [
+    {
+      "mim_id": "RecallSocialPost",
+      "prompt_category": "Entry-Core",
+      "prompt_sub_category": "AN",
+      "index": "1",
+      "condition": "",
+      "prompt": "Whoa. You caught me just in time. Maybe you can post something later",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "RecallSocialPost_AN_1"
+    },
+    {
+      "mim_id": "RecallSocialPost",
+      "prompt_category": "Entry-Core",
+      "prompt_sub_category": "AN",
+      "index": "2",
+      "condition": "",
+      "prompt": "Whoa! Almost sent it. Cancelled!",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "RecallSocialPost_AN_2"
+    }
+  ]
+}

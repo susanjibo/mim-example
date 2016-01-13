@@ -1,0 +1,50 @@
+{
+  "mim_id": "HaveNewMessages",
+  "skill_id": "jot",
+  "mim_type": "optional-response",
+  "rule_name": "NotNow",
+  "rule_slots": "notNow",
+  "screen_slots_available": "false",
+  "sample_utterances": "Not right now Jibo,not now",
+  "timeout": "1",
+  "force_confirmation": "false",
+  "barge_in": "true",
+  "photo_quality_light": "false",
+  "notes": "",
+  "modified": "1/12/2016 10:18:33 PM",
+  "prompts": [
+    {
+      "mim_id": "HaveNewMessages",
+      "prompt_category": "Entry-Core",
+      "prompt_sub_category": "AN",
+      "index": "1",
+      "condition": "${messageCount == 1}",
+      "prompt": "Yep, I've got a new one, here.",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "HaveNewMessages_AN_1"
+    },
+    {
+      "mim_id": "HaveNewMessages",
+      "prompt_category": "Entry-Core",
+      "prompt_sub_category": "AN",
+      "index": "1",
+      "condition": "${messageCount == 2}",
+      "prompt": "I've got a couple new ones for you.",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "HaveNewMessages_AN_1"
+    },
+    {
+      "mim_id": "HaveNewMessages",
+      "prompt_category": "Entry-Core",
+      "prompt_sub_category": "AN",
+      "index": "1",
+      "condition": "${messageCount > 2}",
+      "prompt": "Yes, you've got a few new ones.",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "HaveNewMessages_AN_1"
+    }
+  ]
+}

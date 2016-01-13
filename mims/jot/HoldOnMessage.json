@@ -1,0 +1,50 @@
+{
+  "mim_id": "HoldOnMessage",
+  "skill_id": "jot",
+  "mim_type": "optional-response",
+  "rule_name": "GoOn",
+  "rule_slots": "goOn",
+  "screen_slots_available": "true",
+  "sample_utterances": "Hey Jibo go on,go on",
+  "timeout": "900",
+  "force_confirmation": "false",
+  "barge_in": "true",
+  "photo_quality_light": "false",
+  "notes": "SFX must include on-screen options to continue",
+  "modified": "1/12/2016 10:18:43 PM",
+  "prompts": [
+    {
+      "mim_id": "HoldOnMessage",
+      "prompt_category": "Entry-Core",
+      "prompt_sub_category": "AN",
+      "index": "1",
+      "condition": "",
+      "prompt": "Sure! Say, \"Hey Jibo, go on,\" when you're ready.",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "HoldOnMessage_AN_1"
+    },
+    {
+      "mim_id": "HoldOnMessage",
+      "prompt_category": "Entry-Core",
+      "prompt_sub_category": "AN",
+      "index": "2",
+      "condition": "",
+      "prompt": "Say, \"Hey Jibo, go on,\" when you want to hear the rest.",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "HoldOnMessage_AN_2"
+    },
+    {
+      "mim_id": "HoldOnMessage",
+      "prompt_category": "Entry-Core",
+      "prompt_sub_category": "SFX",
+      "index": "",
+      "condition": "",
+      "prompt": "",
+      "media": "SFX",
+      "extra": "",
+      "prompt_id": "HoldOnMessage_SFX_"
+    }
+  ]
+}

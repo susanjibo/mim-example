@@ -1,0 +1,33 @@
+TopRule = $* $CHOICE {slotAction = CHOICE._slotAction} | $MIMCMD {slotCommand = MIMCMD._slotCommand} $*;
+
+#Cheese bread or soup
+
+CHOICE =
+		$CHEESE {_slotAction=CHEESE._slotAction} |
+    $SOUP {_slotAction=SOUP._slotAction} |
+		$BREAD {_slotAction=BREAD._slotAction};
+
+CHEESE = cheese {_slotAction='cheese'};
+
+BREAD = bread {_slotAction='bread'};
+
+SOUP = soup {_slotAction='soup'};
+
+MIMCMD =
+	$HELP {_slotCommand=HELP._slotCommand} |
+	$REPEAT {_slotCommand=REPEAT._slotCommand};
+
+HELP =
+	(
+	  (what the ?fuck) |
+		(help ?me) |
+		(i am lost)
+	) {_slotCommand='help'};
+
+REPEAT =
+	(
+	  (what was that ?again) |
+		(repeat ?that) |
+		(say that again) |
+		(again please jibo)
+	) {_slotCommand='repeat'};

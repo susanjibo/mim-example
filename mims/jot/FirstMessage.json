@@ -1,0 +1,39 @@
+{
+  "mim_id": "FirstMessage",
+  "skill_id": "jot",
+  "mim_type": "optional-response",
+  "rule_name": "MessageManager",
+  "rule_slots": "reply,delete,holdOn,notNow,notRecipient,nextMessage,previousMessage,playAgain,playAudio",
+  "screen_slots_available": "false",
+  "sample_utterances": "lets reply,trash that,hang on a second,save it,im not george,next message please, previous message,play that again please,play his audio",
+  "timeout": "1",
+  "force_confirmation": "false",
+  "barge_in": "true",
+  "photo_quality_light": "false",
+  "notes": "",
+  "modified": "1/13/2016 8:50:40 AM",
+  "prompts": [
+    {
+      "mim_id": "FirstMessage",
+      "prompt_category": "Entry-Core",
+      "prompt_sub_category": "AN",
+      "index": "1",
+      "condition": "",
+      "prompt": "Here's the first one:",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "FirstMessage_AN_1"
+    },
+    {
+      "mim_id": "FirstMessage",
+      "prompt_category": "Entry-Core",
+      "prompt_sub_category": "AN",
+      "index": "2",
+      "condition": "",
+      "prompt": "First message:",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "FirstMessage_AN_2"
+    }
+  ]
+}

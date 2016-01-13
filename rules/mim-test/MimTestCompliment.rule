@@ -1,0 +1,19 @@
+TopRule = $* $COMPLIMENT {slotAction = COMPLIMENT._slotAction} $*;
+
+#Optional Response to compliment
+
+COMPLIMENT =
+		$THANKS {_slotAction=THANKS._slotAction} |
+    $BACKATYOU {_slotAction=BACKATYOU._slotAction} |
+		$ACK {_slotAction=ACK._slotAction};
+
+THANKS = thanks {_slotAction='thanks'};
+
+BACKATYOU =
+	(
+	  (so do you) |
+		(you too) |
+		(you two)
+	) {_slotAction='backatyou'};
+
+ACK = (i know) {_slotAction='ack'};

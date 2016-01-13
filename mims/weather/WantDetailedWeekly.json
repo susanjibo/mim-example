@@ -1,0 +1,72 @@
+{
+  "mim_id": "WantDetailedWeekly",
+  "skill_id": "weather",
+  "mim_type": "question",
+  "rule_name": "WantDetailedWeekly",
+  "rule_slots": "yes,no",
+  "screen_slots_available": "false",
+  "sample_utterances": "Okay, sure.",
+  "timeout": "4",
+  "force_confirmation": "false",
+  "barge_in": "true",
+  "photo_quality_light": "false",
+  "notes": "",
+  "modified": "1/9/2016 10:34:07 AM",
+  "prompts": [
+    {
+      "mim_id": "WantDetailedWeekly",
+      "prompt_category": "Entry-Core",
+      "prompt_sub_category": "HoldReturn",
+      "index": "1",
+      "condition": "",
+      "prompt": "So, would you like a detailed weekly forecast?",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "WantDetailedWeekly_HoldReturn_1"
+    },
+    {
+      "mim_id": "WantDetailedWeekly",
+      "prompt_category": "Entry-Core",
+      "prompt_sub_category": "Q",
+      "index": "1",
+      "condition": "",
+      "prompt": "Do you want a day-by-day forecast for the whole week?",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "WantDetailedWeekly_Q_1"
+    },
+    {
+      "mim_id": "WantDetailedWeekly",
+      "prompt_category": "Entry-Core",
+      "prompt_sub_category": "Verbose",
+      "index": "1",
+      "condition": "",
+      "prompt": "I can play the details of each day of the week if you like. Shall I do that?",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "WantDetailedWeekly_Verbose_1"
+    },
+    {
+      "mim_id": "WantDetailedWeekly",
+      "prompt_category": "Errors",
+      "prompt_sub_category": "NI",
+      "index": "1",
+      "condition": "",
+      "prompt": "So do you want a detailed forecast for the whole week?",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "WantDetailedWeekly_NI_1"
+    },
+    {
+      "mim_id": "WantDetailedWeekly",
+      "prompt_category": "Errors",
+      "prompt_sub_category": "NM",
+      "index": "1",
+      "condition": "",
+      "prompt": "Was that  Yes or No: Do you want a detailed forecast?",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "WantDetailedWeekly_NM_1"
+    }
+  ]
+}

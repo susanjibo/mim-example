@@ -1,0 +1,61 @@
+{
+  "mim_id": "RollupASAPSocial",
+  "skill_id": "jot",
+  "mim_type": "optional-response",
+  "rule_name": "MessageRollup",
+  "rule_slots": "cancelMessage,addRecipient,removeRecipient,changeRecipient,changeDeliveryTime,editContent,createNewMessage",
+  "screen_slots_available": "false",
+  "sample_utterances": "cancel,include george,remove jane,send it to elroy instead,instead i want you to send this on thursday,change the message,start over again",
+  "timeout": "1",
+  "force_confirmation": "false",
+  "barge_in": "true",
+  "photo_quality_light": "false",
+  "notes": "",
+  "modified": "1/13/2016 9:07:06 AM",
+  "prompts": [
+    {
+      "mim_id": "RollupASAPSocial",
+      "prompt_category": "Entry-Core",
+      "prompt_sub_category": "AN",
+      "index": "1",
+      "condition": "${recipient.social == 'facebook'}",
+      "prompt": "It's been posted!",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "RollupASAPSocial_AN_1"
+    },
+    {
+      "mim_id": "RollupASAPSocial",
+      "prompt_category": "Entry-Core",
+      "prompt_sub_category": "AN",
+      "index": "1",
+      "condition": "${recipient.social == 'twitter'}",
+      "prompt": "It's been tweeted!",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "RollupASAPSocial_AN_1"
+    },
+    {
+      "mim_id": "RollupASAPSocial",
+      "prompt_category": "Entry-Core",
+      "prompt_sub_category": "TruncatedFacebook",
+      "index": "",
+      "condition": "${recipient.social == 'facebook'}",
+      "prompt": "Posted!",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "RollupASAPSocial_TruncatedFacebook_"
+    },
+    {
+      "mim_id": "RollupASAPSocial",
+      "prompt_category": "Entry-Core",
+      "prompt_sub_category": "TruncatedTwitter",
+      "index": "",
+      "condition": "${recipient.social == 'twitter'}",
+      "prompt": "Tweeted!",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "RollupASAPSocial_TruncatedTwitter_"
+    }
+  ]
+}

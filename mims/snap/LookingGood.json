@@ -1,0 +1,50 @@
+{
+  "mim_id": "LookingGood",
+  "skill_id": "snap",
+  "mim_type": "optional-response",
+  "rule_name": "TakeMore_SharePhoto_VeryGood",
+  "rule_slots": "[takeMore, sharePhoto, veryGood]",
+  "screen_slots_available": "false",
+  "sample_utterances": "Again!",
+  "timeout": "1",
+  "force_confirmation": "false",
+  "barge_in": "true",
+  "photo_quality_light": "true",
+  "notes": "",
+  "modified": "1/7/2016 8:21:54 AM",
+  "prompts": [
+    {
+      "mim_id": "LookingGood",
+      "prompt_category": "Entry-Core",
+      "prompt_sub_category": "AN",
+      "index": "1",
+      "condition": "",
+      "prompt": "Looking good!",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "LookingGood_AN_1"
+    },
+    {
+      "mim_id": "LookingGood",
+      "prompt_category": "Entry-Core",
+      "prompt_sub_category": "AN",
+      "index": "2",
+      "condition": "",
+      "prompt": "Oo, nice!",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "LookingGood_AN_2"
+    },
+    {
+      "mim_id": "LookingGood",
+      "prompt_category": "Entry-Core",
+      "prompt_sub_category": "AN",
+      "index": "3",
+      "condition": "",
+      "prompt": "Nice smile, there!",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "LookingGood_AN_3"
+    }
+  ]
+}

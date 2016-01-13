@@ -1,0 +1,28 @@
+{
+  "mim_id": "NoPrompt-PlayMessage",
+  "skill_id": "jot",
+  "mim_type": "optional-response",
+  "rule_name": "PlayMessage",
+  "rule_slots": "playMessage",
+  "screen_slots_available": "true",
+  "sample_utterances": "Play that message please,play it",
+  "timeout": "60",
+  "force_confirmation": "false",
+  "barge_in": "true",
+  "photo_quality_light": "false",
+  "notes": "No prompt.",
+  "modified": "1/12/2016 10:19:39 PM",
+  "prompts": [
+    {
+      "mim_id": "NoPrompt-PlayMessage",
+      "prompt_category": "Silence",
+      "prompt_sub_category": "AN",
+      "index": "1",
+      "condition": "",
+      "prompt": "",
+      "media": "",
+      "extra": "",
+      "prompt_id": "NoPrompt-PlayMessage_AN_1"
+    }
+  ]
+}

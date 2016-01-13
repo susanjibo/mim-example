@@ -1,0 +1,50 @@
+{
+  "mim_id": "MimTestPizzaDelivery",
+  "skill_id": "mim-test",
+  "mim_type": "question",
+  "rule_name": "MimTestPizzaDelivery",
+  "rule_slots": "slotAction",
+  "screen_slots_available": "true",
+  "sample_utterances": "pickup,delivery,i will pick it up",
+  "timeout": "4",
+  "force_confirmation": "false",
+  "barge_in": "true",
+  "photo_quality_light": "false",
+  "notes": "",
+  "modified": "1/9/2016 10:33:59 AM",
+  "prompts": [
+    {
+      "mim_id": "MimTestPizzaDelivery",
+      "prompt_category": "Entry-Core",
+      "prompt_sub_category": "Q",
+      "index": "1",
+      "condition": "",
+      "prompt": "Do you want delivery or will you pick it up?",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "MimTestPizzaDelivery_Q_1"
+    },
+    {
+      "mim_id": "MimTestPizzaDelivery",
+      "prompt_category": "Errors",
+      "prompt_sub_category": "NI",
+      "index": "1",
+      "condition": "",
+      "prompt": "So, do you want delivery or will you pick it up?",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "MimTestPizzaDelivery_NI_1"
+    },
+    {
+      "mim_id": "MimTestPizzaDelivery",
+      "prompt_category": "Errors",
+      "prompt_sub_category": "NM",
+      "index": "1",
+      "condition": "",
+      "prompt": "You can say delivery or pick it up.",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "MimTestPizzaDelivery_NM_1"
+    }
+  ]
+}

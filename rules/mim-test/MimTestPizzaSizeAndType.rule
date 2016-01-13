@@ -1,0 +1,41 @@
+TopRule = ($* ?($SIZE {slotPizzaSize = SIZE._slotPizzaSize}) $CHOICE {slotAction = CHOICE._slotAction} $*);
+
+#What type of pizza?
+
+SIZE =
+		$SMALL {_slotPizzaSize=SMALL._slotPizzaSize} |
+    $MEDIUM {_slotPizzaSize=MEDIUM._slotPizzaSize} |
+    $LARGE {_slotPizzaSize=LARGE._slotPizzaSize} |
+    $EXTRA {_slotPizzaSize=EXTRA._slotPizzaSize};
+
+SMALL = (small) {_slotPizzaSize='small'};
+MEDIUM = (medium) {_slotPizzaSize='medium'};
+LARGE = (large) {_slotPizzaSize='large'};
+EXTRA = (extra large) {_slotPizzaSize='extra'};
+
+CHOICE =
+		$PEPPERONI {_slotAction=PEPPERONI._slotAction} |
+    $MUSHROOM {_slotAction=MUSHROOM._slotAction} |
+    $CHEESE {_slotAction=CHEESE._slotAction} |
+    $SAUSAGE {_slotAction=SAUSAGE._slotAction} |
+    $HAWAIIAN {_slotAction=HAWAIIAN._slotAction} |
+		$VEGGIE {_slotAction=VEGGIE._slotAction};
+
+PEPPERONI = (
+		(pepperoni) |
+		(roni)
+	  ) {_slotAction='pepperoni'};
+
+MUSHROOM = (mushroom) {_slotAction='mushroom'};
+
+HAWAIIAN = (hawaiian) {_slotAction='hawaiian'};
+
+CHEESE = (cheese) {_slotAction='cheese'};
+
+SAUSAGE = (sausage) {_slotAction='sausage'};
+
+VEGGIE = (
+		(veggie) |
+		(vegitable?s) |
+    (vegitarian)
+	  ) {_slotAction='veggie'};

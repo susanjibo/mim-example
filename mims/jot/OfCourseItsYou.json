@@ -1,0 +1,50 @@
+{
+  "mim_id": "OfCourseItsYou",
+  "skill_id": "jot",
+  "mim_type": "announce",
+  "rule_name": "N/A",
+  "rule_slots": "",
+  "screen_slots_available": "false",
+  "sample_utterances": "",
+  "timeout": "0",
+  "force_confirmation": "false",
+  "barge_in": "false",
+  "photo_quality_light": "false",
+  "notes": "",
+  "modified": "1/7/2016 8:21:19 AM",
+  "prompts": [
+    {
+      "mim_id": "OfCourseItsYou",
+      "prompt_category": "Entry-Core",
+      "prompt_sub_category": "AN",
+      "index": "1",
+      "condition": "",
+      "prompt": "Of course! Sorry.",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "OfCourseItsYou_AN_1"
+    },
+    {
+      "mim_id": "OfCourseItsYou",
+      "prompt_category": "Entry-Core",
+      "prompt_sub_category": "AN",
+      "index": "2",
+      "condition": "",
+      "prompt": "Sorry! Of course it's you, ${crewMember}.",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "OfCourseItsYou_AN_2"
+    },
+    {
+      "mim_id": "OfCourseItsYou",
+      "prompt_category": "Entry-Core",
+      "prompt_sub_category": "AN",
+      "index": "3",
+      "condition": "",
+      "prompt": "Just messing with you, ${crewMember}! Well, not really. Sorry.",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "OfCourseItsYou_AN_3"
+    }
+  ]
+}
