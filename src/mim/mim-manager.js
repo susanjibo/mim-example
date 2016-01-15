@@ -15,6 +15,10 @@ class MimManager {
         MimManager.guiManager = gui_manager;
     }
 
+    static getGuiManager() {
+        return MimManager.guiManager;
+    }
+
 }
 
 MimManager.initialized = false;

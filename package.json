@@ -9,12 +9,7 @@
   "dependencies": {
     "babel-core": "^5.4.5",
     "behaviorify": "git+ssh://git@github.jibo.com:sdk/behaviorify.git",
-    "jibo": "git+ssh://git@github.jibo.com:sdk/jibo.git#dev",
-    "embodied-dialog": "git+ssh://git@github.jibo.com:skills/embodied-dialog.git#v0.2.0",
-    "jibo-levers": "git+ssh://git@github.jibo.com:skills/jibo-levers.git#v0.1.0",
-    "jibo-log": "git+ssh://git@github.jibo.com:sdk/jibo-log.git#v0.2.1",
-    "jibo-mim": "git+ssh://git@github.jibo.com:skills/jibo-mim.git#v0.0.7",
-    "jibo-ui": "git+ssh://git@github.jibo.com:skills/jibo-ui.git#v0.2.9"
+    "jibo": "git+ssh://git@github.jibo.com:sdk/jibo.git#dev"
   },
   "devDependencies": {
   },

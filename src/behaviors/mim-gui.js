@@ -19,7 +19,7 @@ module.exports = createBehavior({
         this.guiManagerEventHandler = this.onGuiManagerEvent.bind(this);
     },
     onGuiManagerEvent(event) {
-        console.log(`MimGui: guiManagerEventHandler ${event.type}`);
+        //console.log(`MimGui: guiManagerEventHandler ${event.type}`);
         switch (event.type) {
             case 'itemSelected':
                 this.status = Status.SUCCEEDED;
@@ -47,7 +47,7 @@ module.exports = createBehavior({
         }
     },
     start() {
-        console.log(`MimGui: start`);
+        //console.log(`MimGui: start`);
         this.status = Status.IN_PROGRESS;
         let mim_data = this.getConfig();
         this.mimConfig = mim_data.mimConfig;
@@ -62,8 +62,8 @@ module.exports = createBehavior({
         return true;
     },
     stop() {
-        console.log(`MimGui: stop`, this.asrResults);
-        if (MimManager.guiManager) {
+        //console.log(`MimGui: stop`, this.asrResults);
+        if (MimManager.guiManager && (this.status === Status.SUCCEEDED)) {
             MimManager.guiManager.removeEventListener(this.guiManagerEventHandler);
             MimManager.guiManager.listenStop(this.mimState, this.asrResults, this.speakerIds);
         }

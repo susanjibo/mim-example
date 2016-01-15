@@ -20,7 +20,7 @@ module.exports = createBehavior({
     },
     start() {
         this.status = Status.IN_PROGRESS;
-        console.log(`mim.js: loading mim-bt from: ${__dirname}`);
+        //console.log(`mim.js: loading mim-bt from: ${__dirname}`);
         blackboard.MimManager = MimManager;
         blackboard.AsrResults = AsrResults;
         blackboard.SpeakerIds = SpeakerIds;

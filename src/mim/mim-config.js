@@ -120,7 +120,7 @@ class MimConfig {
             }
         });
 
-        console.log(`getErrorNoInputPrompt: prompt_count: ${prompt_count}`);
+        //console.log(`getErrorNoInputPrompt: prompt_count: ${prompt_count}`);
         if (prompt_count > 0) {
             let random_index = Math.floor(Math.random() * prompt_count);
             result = prompts[random_index];

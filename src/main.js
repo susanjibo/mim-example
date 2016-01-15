@@ -1,9 +1,10 @@
 import jibo from 'jibo';
 import path from 'path';
+import GuiManager from './mim/debug-gui-manager';
+import MimManager from './mim/mim-manager';
 
 let {Status, factory} = jibo.bt;
 
-let GuiManager;
 
 let root = null;
 //let tree = null;
@@ -12,7 +13,7 @@ let blackboard = {};
 let notepad = {};
 
 function start() {
-    root = factory.create('../behaviors/test-pizza', {
+    root = factory.create('../behaviors/main', {
         blackboard: blackboard,
         notepad: notepad
     });
@@ -35,7 +36,7 @@ function update() {
 //}
 
 function setup() {
-    console.log('setup');
+    console.log('Setup');
 
     require('./behaviors/debug-behavior');
     require('./behaviors/mim');
@@ -43,8 +44,10 @@ function setup() {
     let eyeElement = document.getElementById('eye');
     jibo.visualize.createRobotRenderer(eyeElement, jibo.visualize.DisplayType.EYE);
 
-    let JiboEd = jibo.requireAssetPack(path.resolve(__dirname, '../node_modules/embodied-dialog/package.json'));
-    let JiboLevers = jibo.requireAssetPack(path.resolve(__dirname, '../node_modules/jibo-levers/package.json'));
+    let ui_div = document.getElementById('ui');
+    GuiManager.init(ui_div);
+    MimManager.init();
+    MimManager.setGuiManager(GuiManager);
 
     start();
 }
