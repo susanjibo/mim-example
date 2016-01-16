@@ -11,7 +11,7 @@ SIZE =
 SMALL = (small) {_slotPizzaSize='small'};
 MEDIUM = (medium) {_slotPizzaSize='medium'};
 LARGE = (large) {_slotPizzaSize='large'};
-EXTRA = (extra large) {_slotPizzaSize='extra'};
+EXTRA = (extra large) {_slotPizzaSize='extra-large'};
 
 CHOICE =
 		$PEPPERONI {_slotAction=PEPPERONI._slotAction} |

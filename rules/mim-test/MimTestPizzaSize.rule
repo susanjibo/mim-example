@@ -11,4 +11,4 @@ CHOICE =
 SMALL = (small) {_slotAction='small'};
 MEDIUM = (medium) {_slotAction='medium'};
 LARGE = (large) {_slotAction='large'};
-EXTRA = (extra large) {_slotAction='extra'};
+EXTRA = (extra large) {_slotAction='extra-large'};
