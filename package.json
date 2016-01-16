@@ -1,15 +1,15 @@
 {
-  "name": "mim-test-container",
-  "version": "0.1.2",
-  "description": "",
+  "name": "mim-example",
+  "version": "0.1.0",
+  "description": "A example implementation of the 'MIM' concept for managing dialog.",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "babel-core": "^5.4.5",
-    "behaviorify": "git+ssh://git@github.jibo.com:sdk/behaviorify.git",
-    "jibo": "git+ssh://git@github.jibo.com:sdk/jibo.git#dev"
+    "behaviorify": "0.1.3",
+    "jibo": "0.9.0"
   },
   "devDependencies": {
   },

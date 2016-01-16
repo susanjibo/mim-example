@@ -1,1 +1,0 @@
-TopRule = ($* order $* pizza $*) {slotAction = 'order'};

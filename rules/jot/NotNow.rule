@@ -1,8 +1,0 @@
-TopRule = ($* $D_JOT_INTENTS $*) {domain='jot'}{intent = D_JOT_INTENTS._intent};
-
-#Jibo is jumping directly into message playback.
-
-D_JOT_INTENTS = $D_JOT_V_NOTNOW {_intent='notNow'};
-
-D_JOT_V_NOTNOW = ( not $* now ) | ( save ( it | that ) ) | ( hold ( it | that ) ) | cancel | later ;
-

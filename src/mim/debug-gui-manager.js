@@ -32,6 +32,10 @@ class DebugGuiManager {
         DebugGuiManager.eventListener = null; //TODO: something better. One listener for now.
     }
 
+    static update() {
+
+    }
+
     static reset() {
         DebugGuiManager.mimConfigDiv.innerHTML = 'Mim Config:';
         DebugGuiManager.resultsDiv.innerHTML = 'Results:'
