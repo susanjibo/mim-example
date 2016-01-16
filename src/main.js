@@ -5,9 +5,7 @@ import MimManager from './mim/mim-manager';
 
 let {Status, factory} = jibo.bt;
 
-
 let root = null;
-//let tree = null;
 
 let blackboard = {};
 let notepad = {};
@@ -26,14 +24,9 @@ function update() {
         console.log(`BehaviorTree Exited with status: ${root.status}`);
     } else {
         root.update();
-        //GuiManager.update();
         window.requestAnimationFrame(update);
     }
 }
-
-//function onGuiManagerReady() {
-//    console.log(`onGuiManagerReady`);
-//}
 
 function setup() {
     console.log('Setup');
