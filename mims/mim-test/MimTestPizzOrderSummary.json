@@ -20,9 +20,25 @@
       "index": "1",
       "condition": "",
       "prompt": "OK ${userName}, I will order you ${pizzaOrder} ${pizzaDeliveryMode}. Right?",
-      "media": "TTS",
-      "extra": "",
-      "prompt_id": "MimTestPizzOrderSummary_Q_1"
+      "media": "TTS"
+    },
+    {
+      "mim_id": "MimTestPizzOrderSummary",
+      "prompt_category": "Errors",
+      "prompt_sub_category": "NI",
+      "index": "1",
+      "condition": "",
+      "prompt": "So ${userName}, you want ${pizzaOrder} ${pizzaDeliveryMode}. Right?",
+      "media": "TTS"
+    },
+    {
+      "mim_id": "MimTestPizzOrderSummary",
+      "prompt_category": "Errors",
+      "prompt_sub_category": "NM",
+      "index": "1",
+      "condition": "",
+      "prompt": "Sorry, I missed that, ${userName}. You want ${pizzaOrder} ${pizzaDeliveryMode}. Right?",
+      "media": "TTS"
     }
   ]
 }
