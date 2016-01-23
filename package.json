@@ -13,6 +13,6 @@
   },
   "devDependencies": {
   },
-  "license": "UNLICENSED",
-  "private": true
+  "author": "Andrew Rapo",
+  "license": "Copyright 2016, Jibo Inc."
 }
