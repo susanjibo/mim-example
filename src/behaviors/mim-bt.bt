@@ -120,7 +120,7 @@
                 "\t",
                 "\tlet options = {",
                 "\t\theyJibo: false,",
-                "\t\tdetectEnd: true,",
+                "\t\tdetectEnd: false,",
                 "\t\treturnSpeakers: true,",
                 "\t\tincremental: true,",
                 "\t\ttimeout: 6000,",
@@ -140,10 +140,8 @@
                 "\tlistener.on('cloud', (asrResultsData, speakerIdsData) => {",
                 "\t\tconsole.log(`MimBt: ListenJS Listen: Results:`, asrResultsData, speakerIdsData);",
                 "\t\t",
-                "\t\tlet AsrResults = require('../mim/asr-result');",
-                "\t\tlet SpeakerIds = require('../mim/speaker-ids');",
-                "\t\tnotepad.asrResults = new AsrResults(asrResultsData);",
-                "\t\tnotepad.speakerIds = new SpeakerIds(speakerIdsData);",
+                "\t\tnotepad.asrResults = new notepad.AsrResults(asrResultsData);",
+                "\t\tnotepad.speakerIds = new notepad.SpeakerIds(speakerIdsData);",
                 "\t",
                 "\t\tlet MimManager = require('../mim/mim-manager');",
                 "\t\tlet GuiManager = MimManager.getGuiManager();",
@@ -152,8 +150,15 @@
                 "\t\t}",
                 "\t});",
                 "\t",
-                "\tlistener.on('incremental', (asrResultsData, speakerIdsData) => {",
-                "\t\tconsole.log(`MimBt: ListenJS Incremental Results:`, asrResultsData, speakerIdsData);",
+                "\tlistener.on('incremental', (asrResultsData, stopFunction, more) => {",
+                "\t\tconsole.log(`MimBt: ListenJS Incremental Results:`, asrResultsData, stopFunction, more);",
+                "\t\tnotepad.asrResults = new notepad.AsrResults(asrResultsData);",
+                "\t\tnotepad.speakerIds = new notepad.SpeakerIds(); //no speaker id data provided by incremental resuts!",
+                "\t\t",
+                "\t\tif (notepad.asrResults.state === 'match') {",
+                "\t\t\tconsole.log(`\\tIncremental Results Match:`, notepad.asrResults);",
+                "\t\t\tstopFunction();",
+                "\t\t}",
                 "\t});",
                 "}"
             ]
@@ -207,6 +212,9 @@
                 "  let MimState = require('../mim/mim-state');",
                 "  notepad.mimState = new MimState();",
                 "  notepad.mimState.lastResultState = 'entry';",
+                "  ",
+                "  notepad.AsrResults = require('../mim/asr-result');",
+                "  notepad.SpeakerIds = require('../mim/speaker-ids');",
                 "}"
             ]
         ]
@@ -221,7 +229,7 @@
             [
                 "() => {  ",
                 "  if (!notepad.asrResults) {",
-                "    if (!notepad.timedOut) notepad.log.error('No asr result!');",
+                "    console.log('No asr result!');",
                 "  } else {",
                 "    notepad.mimState.lastResultState = notepad.asrResults.state;",
                 "  }",
