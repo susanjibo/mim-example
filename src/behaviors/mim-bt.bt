@@ -219,8 +219,12 @@
         "parent": 91,
         "args": [
             [
-                "() => {",
-                "  notepad.mimState.lastResultState = notepad.asrResults.state;",
+                "() => {  ",
+                "  if (!notepad.asrResults) {",
+                "    if (!notepad.timedOut) notepad.log.error('No asr result!');",
+                "  } else {",
+                "    notepad.mimState.lastResultState = notepad.asrResults.state;",
+                "  }",
                 "  ",
                 "  switch (notepad.mimState.lastResultState) {",
                 "      case 'match':",
