@@ -11,7 +11,7 @@
   "barge_in": "true",
   "photo_quality_light": "false",
   "notes": "",
-  "modified": "1/12/2016 10:18:03 PM",
+  "modified": "1/21/2016 8:23:29 AM",
   "prompts": [
     {
       "mim_id": "MimTestWaitForOrderPizza",
@@ -19,7 +19,7 @@
       "prompt_sub_category": "Q",
       "index": "1",
       "condition": "",
-      "prompt": "Hello, ${userName}. Let me know how I can help you.",
+      "prompt": "Hello, Let me know how I can help you.",
       "media": "TTS",
       "extra": "",
       "prompt_id": "MimTestWaitForOrderPizza_Q_1"
@@ -30,7 +30,7 @@
       "prompt_sub_category": "NI",
       "index": "1",
       "condition": "",
-      "prompt": "So, ${userName}. Let me know how I can help you.",
+      "prompt": "So, Let me know how I can help you.",
       "media": "TTS",
       "extra": "",
       "prompt_id": "MimTestWaitForOrderPizza_NI_1"

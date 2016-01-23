@@ -1,0 +1,28 @@
+{
+  "mim_id": "MimTestPizzaOrderError",
+  "skill_id": "mim-test",
+  "mim_type": "announce",
+  "rule_name": "MimTestYesNo",
+  "rule_slots": "",
+  "screen_slots_available": "false",
+  "sample_utterances": "",
+  "timeout": "",
+  "force_confirmation": "false",
+  "barge_in": "true",
+  "photo_quality_light": "false",
+  "notes": "Shouldn't need to specify a rule in the next version of jibo-mim",
+  "modified": "1/22/2016 8:03:29 AM",
+  "prompts": [
+    {
+      "mim_id": "MimTestPizzaOrderError",
+      "prompt_category": "Entry-Core",
+      "prompt_sub_category": "AN",
+      "index": "1",
+      "condition": "",
+      "prompt": "Oops. Something went wrong, ${userName}. Let's try again.",
+      "media": "TTS",
+      "extra": "",
+      "prompt_id": "MimTestPizzaOrderError_AN_1"
+    }
+  ]
+}
