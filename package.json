@@ -1,6 +1,6 @@
 {
   "name": "mim-example",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A example implementation of the 'MIM' concept for managing dialog.",
   "main": "index.html",
   "scripts": {
